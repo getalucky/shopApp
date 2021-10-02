@@ -1,0 +1,19 @@
+/**app.wxss**/
+/* 全局导入字体图标 */
+@import './libs/myfont.wxss';
+
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+
+.parting-line{
+  height: 30rpx;
+  background-color: #F9F9F9;
+}

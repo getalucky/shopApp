@@ -1,0 +1,27 @@
+<!--pages/index/index.wxml-->
+<!-- 搜索框 -->
+<sreach/>
+<!-- 轮播图 -->
+<swiper class="swiper" indicator-dots='true' autoplay='true' indicator-active-color="red">
+  <swiper-item class="swiper-item" wx:for="{{bannerImg}}" wx:key="goods_id">
+    <image src="{{item.image_src}}" mode="aspectFit"></image>
+  </swiper-item>  
+</swiper>
+<!-- 分类选项 -->
+<view class="classify">
+  <view wx:for="{{catitems}}" wx:key='name' bindtap="goToPage" data-page="{{item}}">
+    <image src="{{item.image_src}}"></image>
+  </view>
+</view>
+<!-- 商品列表 -->
+<view wx:for="{{goodsList}}" wx:key="id" class="goodsList">
+<!-- 标题图片 -->
+<image src="{{item.floor_title.image_src}}" class="goodsTitle"></image>
+<!-- 商品栏目内容开始 -->
+  <view class="goodsItem clearfix">
+    <view wx:for="{{item.product_list}}" wx:for-item="item2" wx:key="name">
+      <navigator url="{{item2.navigator_url}}"><image src="{{item2.image_src}}"></image></navigator>
+    </view>
+  </view>
+<!-- 商品栏目内容结束 -->
+</view>

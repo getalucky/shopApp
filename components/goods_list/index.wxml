@@ -1,0 +1,11 @@
+<view class="goodsItem">
+  <!-- 缩略图区 -->
+  <image src="{{item.icon ? item.icon : '/images/default.png'}}" mode="aspectFit" class="goodsIcon"></image>
+  <!-- 内容区 -->
+  <view class="goodsContent">
+    <!-- 标题区 -->
+    <view class="goodsTitle">{{item.name}}</view>
+    <!-- 价钱区 -->
+    <view class="goodsPice">{{item.price}}</view>
+  </view>
+</view>

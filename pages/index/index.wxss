@@ -1,0 +1,51 @@
+/* pages/index/index.wxss */
+.swiper,
+.swiper-item{
+  width: 750rpx;
+  height: 340rpx;
+}
+.swiper-item image{
+  width: 100%;
+  height: 340rpx;
+}
+
+.classify{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10rpx;
+}
+.classify image{
+  width: 128rpx;
+  height: 140rpx;
+}
+
+.clearfix::after{
+  content: "";
+  clear: both;
+  height: 0;
+  visibility: hidden;
+  display: block;
+}
+
+.goodsList{
+  margin-top: 40rpx;
+}
+
+.goodsTitle{
+  height: 59rpx;
+  width: 100%;
+}
+
+.goodsItem view:nth-child(1) image{
+  float: left;
+  margin:0 15rpx;
+  width: 232rpx;
+  height: 386rpx;
+} 
+
+.goodsItem view:not(:nth-child(1)) image{
+  float: left;
+  margin: 0 10rpx 10rpx 0;
+  width: 233rpx;
+  height: 188rpx;
+}

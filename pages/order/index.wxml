@@ -1,0 +1,24 @@
+<!--pages/order/index.wxml-->
+<list tab="{{dataList}}" bind:handel="handelTab"/>
+<view class="order">
+<block wx:for="{{orderList}}" wx:key="order_id">
+<view class="order_item">
+
+<view class="item">
+<view>订单编号</view>
+<view>{{item.order_number}}</view>
+</view>
+
+<view class="item">
+<view>订单金额</view>
+<view class="price">{{item.order_price}}</view>
+</view>
+
+<view class="item">
+<view>订单日期</view>
+<view>{{item.update_time}}</view>
+</view>
+
+</view>
+</block>
+</view>

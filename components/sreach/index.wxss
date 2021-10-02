@@ -1,0 +1,13 @@
+/* components/sreach/index.wxss */
+.sreachComponent{
+  height: 100rpx;
+  background-color: #EB4450;
+}
+.sreach{
+  margin: auto;
+  width: 700rpx;
+  height: 80rpx;
+  line-height: 100rpx;
+  text-align: center;
+  background-color: #fff;
+}

@@ -1,0 +1,18 @@
+<!-- 搜索框 -->
+<sreach/>
+<!-- 顶部tab栏 -->
+<view class="topTab">
+  <!-- 每一项选项 -->
+  <block wx:for="{{tabItems}}" wx:key='id'> 
+    <view class="tabItem {{tabIndex == index ? 'active' : ''}}" bindtap="handleTab" data-tabIndex='{{index}}'>{{item.name}}</view>
+  </block>
+</view>
+<!-- 顶部tab栏结束 -->
+<!-- 内容区 -->
+<view class="goodsList">
+  <!-- 每一项商品 -->
+  <block wx:for="{{showGoodsList}}" wx:key="id">
+      <goodslist item="{{item}}" bindtap="goToDetail" data-id='{{item.id}}'/>
+  </block>
+</view>
+<!-- 内容区结束 -->

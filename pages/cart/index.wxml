@@ -1,0 +1,35 @@
+<!-- 购物车列表 -->
+<view class="cartList" wx:for="{{goodsList}}" wx:key="id">
+  <!-- 选择 -->
+  <view class="selectBtn" bindtap="radioSelect" data-index='{{index}}'>
+    <radio color='#EB4450' checked="{{item.isSelect}}"></radio>
+  </view>
+  <!-- 商品 -->
+  <view class="goodsContent">
+    <goodslist item="{{item}}"/>
+    <!-- 商品数量 -->
+    <view class="goodsCount">
+      <view class="iconfont icon-jian" bindtap="chageCount" data-key="{{0}}" data-index='{{index}}'></view>
+      <view>{{item.goodsCount}}</view>
+      <view class="iconfont icon-icon-" bindtap="chageCount" data-key="{{1}}" data-index='{{index}}'></view>
+    </view>
+  </view>
+</view>
+<!-- 没有商品时候显示 -->
+<view class="notGoods {{goodsList.length == 0 ? '' : 'hidden'}}" >
+  您的购物车空空如也
+  <navigator open-type='switchTab' class="goIndex" url='/pages/index/index'>前往首页看更多</navigator>
+</view>
+<!-- 底部购买 -->
+<view class="bottomCard">
+  <view bindtap="allSelectBtn">
+    <radio color='#EB4450' checked="{{allSelect}}">全选</radio>
+  </view>
+  <view class="allPrice">
+    <text>合计：</text>
+    <text class="price">{{allPrice}}</text>
+  </view>
+  <button class="settlement" bindtap="settlement">
+    去结算({{selectGoodsCount}})
+  </button>
+</view>

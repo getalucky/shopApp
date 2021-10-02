@@ -1,0 +1,38 @@
+<!--pages/user/index.wxml-->
+<view class="userImg" wx:if="{{avatarUrl}}">
+	<image src="{{avatarUrl}}" class="img"></image>
+	<view class="smallImg">
+		<image src="{{avatarUrl}}" class="img1"></image>
+		<view class="names">{{nickName}}</view>
+	</view>
+</view>
+<view class="login" wx:else>
+	<button class="user" open-type="getUserInfo" bindgetuserinfo="handleUser">登录授权</button>
+</view>
+<view class="orderInfo">
+	<block wx:for="{{list}}" wx:key="id">
+		<view class="order_item {{index === activedIndex?'active':''}}" bindtap="handel" data-index="{{index}}">
+			<view>{{item.name}}</view>
+		</view>
+	</block>
+</view>
+<view class="detail">
+	<view class="detail_item">
+		<view class="item_left">
+			<view class="left_detail">联系客服</view>
+		</view>
+		<view class="item_right">400-618-4000</view>
+	</view>
+	<view class="detail_item">
+		<view class="item_left">
+			<view class="left_detail">意见反馈</view>
+		</view>
+		<view class="item_right"></view>
+	</view>
+	<view class="detail_item">
+		<view class="item_left">
+			<view class="left_detail">当前版本</view>
+		</view>
+		<view class="item_right">v4.1.1</view>
+	</view>
+</view>

@@ -1,0 +1,85 @@
+/* pages/pay/index.wxss */
+.shopping{
+  box-sizing: border-box;
+  padding-bottom: 83rpx;
+}
+/* 地址 */
+.map{
+  box-sizing: border-box;
+  padding: 20rpx 35rpx;
+}
+
+.address{
+  font-size: 30rpx;
+}
+
+.message{
+  display: flex;
+  font-size: 26rpx;
+  color: #434343;
+}
+.message>view{
+  margin-top: 20rpx;
+  margin-right: 25rpx;
+}
+.hiddle{
+  display: none;
+}
+
+/* 商品 */
+.title{
+  font-size: 26rpx;
+  margin: 20rpx 0;
+}
+
+.goods-Item{
+  position: relative;
+}
+
+.goods-count{
+  position: absolute;
+  right: 56rpx;
+  bottom: 32rpx;
+  font-size: 28rpx;
+}
+
+/* 底部 */
+
+.bottomCard{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 83rpx;
+  background-color: #fff;
+  border-top: 1rpx solid #ccc;
+}
+
+.allPrice{
+  margin-left: 32rpx;
+  font-size: 26rpx;
+}
+
+.allPrice .price{
+  color: #EA4350;
+}
+.allPrice .price::before{
+  content: "￥";
+  font-size: 80%;
+}
+
+.bottomCard .settlement{
+  position: absolute;
+  right: 47rpx;
+  top: 16rpx;
+  border-radius: 26rpx;
+  padding: 0;
+  width: 150rpx;
+  height: 52rpx;
+  background-color: #EA4350;
+  font-size: 21rpx;
+  line-height: 52rpx;
+  color: #fff;
+}

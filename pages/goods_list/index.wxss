@@ -1,0 +1,22 @@
+.topTab{
+  display: flex;
+  justify-content: space-around;
+  width: 750rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+}
+.tabItem{
+  width: 184rpx;
+  text-align: center;
+  font-size: 30rpx;
+}
+
+.tabItem.active{
+  font-weight: 500;
+  border-bottom: 3px solid #EA4350;
+}
+
+/* 内容区 */
+.goodsList{
+  margin-top: 15rpx;
+}

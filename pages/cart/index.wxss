@@ -1,0 +1,107 @@
+/* pages/cart/index.wxss */
+.cartList{
+  box-sizing: border-box;
+  display: flex;
+}
+
+.selectBtn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 115rpx;
+}
+
+.goodsContent{
+  flex: 1;
+  position: relative;
+  padding-right: 15rpx;
+}
+
+.goodsCount{
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 44rpx;
+  bottom: 33rpx;
+}
+
+.goodsCount>view{
+  color: #8A8A8A;
+}
+.goodsCount>view:nth-child(2){
+  width: 100rpx;
+  text-align: center;
+}
+
+.goodsCount .iconfont{
+  font-size: 50rpx;
+}
+
+.notGoods{
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  bottom: 0;
+  left: 0;  
+  right: 0;
+  background-color: #fff;
+}
+.goIndex{
+  width: 300rpx;
+  text-align: center;
+  border: 1rpx solid #ccc;
+  padding: 15rpx 20rpx;
+  border-radius: 25rpx;
+}
+.hidden{
+  opacity: 0;
+  z-index: -1;
+}
+/* 底部 */
+.bottomCard{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 83rpx;
+  background-color: #fff;
+  border-top: 1rpx solid #ccc;
+}
+
+.bottomCard radio{
+  margin-left: 29rpx;
+  color: #8A8A8A;
+  font-size: 21rpx;
+}
+
+.allPrice{
+  margin-left: 32rpx;
+  font-size: 26rpx;
+}
+
+.allPrice .price{
+  color: #EA4350;
+}
+.allPrice .price::before{
+  content: "￥";
+  font-size: 80%;
+}
+
+.bottomCard .settlement{
+  position: absolute;
+  right: 47rpx;
+  top: 16rpx;
+  border-radius: 26rpx;
+  padding: 0;
+  width: 150rpx;
+  height: 52rpx;
+  background-color: #EA4350;
+  font-size: 21rpx;
+  line-height: 52rpx;
+  color: #fff;
+}

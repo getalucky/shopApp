@@ -1,0 +1,122 @@
+/* 轮播图 */
+.goodSBanner{
+  width: 750rpx;
+  height: 497rpx;
+}
+.bannerItem{
+  display: flex;
+  justify-content: center;
+}
+.bannerItem image{
+  width: 497rpx;
+  height: 497rpx;
+}
+
+/* 商品信息 */
+.goodsContent{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 55rpx;
+  padding: 0 35rpx;
+  height: 95rpx;
+  /* line-height: 200rpx; */
+}
+/* 商品价钱 */
+.goodsContent .price{
+  color: #EA4350;
+  font-size: 36rpx;
+}
+.goodsContent .price::before{
+  content: '￥';
+  font-size: 80%;
+}
+/* 收藏分享 */
+.share_collect{
+  display: flex;
+  width: 170rpx;
+  justify-content: space-between;
+}
+
+.share_collect .iconfont{
+  position: relative;
+  font-size: 52rpx;
+}
+.share_collect .iconfont button{
+  position: absolute;
+  background-color: skyblue;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  padding:0;
+}
+/* 商品名称 */
+.goodsName{
+  padding: 0 35rpx 40rpx;
+  font-size: 30rpx;
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  /* 弹性伸缩盒子模型显示 */
+
+  display: -webkit-box;
+
+  /* 限制在一个块元素显示的文本的行数 */
+
+  -webkit-line-clamp: 2;
+
+  /* 设置或检索伸缩盒对象的子元素的排列方式 */
+
+  -webkit-box-orient: vertical;
+}
+
+/* 富文本里面的img */
+.detailImg{
+  vertical-align: top;
+}
+
+/* 底部栏 */
+.bottomCard{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  height: 94rpx;
+  width: 100%;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+  padding: 0 20rpx;
+}
+
+.service{
+  display: flex;
+  flex: 0 0 16%;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20rpx;
+}
+
+.service > view{
+  font-size: 50rpx;
+}
+
+.bottomBtn{
+  flex: 0 0 31%;
+  width: 196rpx;
+  height: 60rpx;
+  border-radius: 30rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 60rpx;
+}
+.yellow{
+  margin-right: 10rpx;
+  background-color: #FCAA23;
+}
+.red{
+  background-color: #EA4350;
+}

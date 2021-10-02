@@ -1,0 +1,110 @@
+/* pages/user/index.wxss */
+page{
+  background:  #f9f9f9;
+}
+.userImg{
+  height: 329rpx;
+  margin-bottom: 20rpx;
+  overflow: hidden;
+  position: relative;
+}
+.userImg .img{
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(8px);
+  opacity: .7; /* fallback */
+}
+.smallImg{
+  position: absolute;
+  top: 64rpx;
+  left: 289rpx;
+  width: 172rpx;
+  border-radius: 50%;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.names{
+  color: #fff;
+}
+.smallImg .img1{
+  width: 100%;
+  height: 172rpx;
+  border-radius: 50%;
+}
+.orderInfo{
+  height: 144rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 12rpx;
+  background: #fff;
+  margin-bottom: 20rpx;
+  border-radius: 10rpx;
+}
+.orderInfo .order_item{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 26rpx;
+  /* color: #474747; */
+}
+.order_item .iconfont{
+  font-size: 42rpx;
+}
+.detail{
+ display: flex;
+ justify-content: center;
+ flex-wrap: wrap;
+ margin: 0 12rpx;
+ background: #fff;
+}
+.detail .detail_item{
+  width: 726rpx;
+  height: 101rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40rpx;
+  border-bottom: 1px solid #eee;
+  font-size: 26rpx;
+  color: #434343;
+}
+.detail_item .item_left{
+  display: flex;
+  align-items: center;
+}
+.item_left .left_detail{
+  margin-left: 28rpx;
+}
+.item_left .iconfont{
+  font-size: 42rpx;
+  color: #434343;
+}
+.active{
+  color: var(--parimyColor);
+}
+.login{
+  height: 329rpx;
+  margin-bottom: 20rpx;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login .user{
+  width: 303rpx;
+  height: 89rpx;
+  border-radius: 100rpx;
+  border: 1rpx solid var(--parimyColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--parimyColor);
+  background: #fff;
+}

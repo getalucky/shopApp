@@ -1,0 +1,53 @@
+<!-- 商品轮播图 -->
+<swiper class="goodSBanner" indicator-dots	='{{true}}' indicator-active-color='red'>
+  <block wx:for='{{goodsPics}}' wx:key="pics_id">
+    <swiper-item class='bannerItem'>
+      <image src="{{item.pics_mid_url ? item.pics_mid_url : '/images/default.png'}}" mode="aspectFit"
+      bindtap="getBigImg"
+      data-imgIndex='{{index}}'
+      ></image>
+    </swiper-item>
+  </block>
+</swiper>
+<!-- 商品轮播图结束 -->
+<!-- 商品内容 -->
+<view class="goodsContent">
+  <!-- 价格 -->
+  <view class="price">{{goodsPirce}}</view>
+  <!-- 分享收藏 -->
+  <view class="share_collect">
+    <view class="iconfont icon-fenxiang1">
+      <button open-type='share'></button>
+    </view>
+    <view class="iconfont icon-shoucang">
+      <button bindtap="collectGoods"></button>
+    </view>
+  </view>
+</view>
+<view class="goodsName">{{goodsTitle}}</view>
+<!-- 商品内容结束 -->
+<!-- 分割线 -->
+<view class="parting-line"></view>
+<!-- 商品详细信息 -->
+<rich-text nodes='{{goodsDetail}}'></rich-text>
+<!-- 商品详细信息结束 -->
+<!-- 底部选项 -->
+<view class="bottomCard">
+  <!-- 联系客服 -->
+  <view class="service">
+  <view class="iconfont icon-kefu"></view>
+  联系客服
+  </view>
+  <!-- 购物车 -->
+  <view class="service">
+  <view class="iconfont icon-gouwuche" bindtap="goToCart"></view>
+  购物车
+  </view>
+  <!-- 加入购物车 -->
+  <view class="bottomBtn yellow" bindtap="addCart">
+    加入购物车
+  </view>
+  <!-- 立即购买 -->
+  <view class="bottomBtn red" bindtap="nowBuy">立即购买</view>
+</view>
+<!-- 底部选项结束 -->

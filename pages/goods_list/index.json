@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "goodslist":"/components/goods_list/index"
+  },
+  "enablePullDownRefresh":true,
+  "backgroundTextStyle":"dark"
+}

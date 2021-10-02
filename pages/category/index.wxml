@@ -1,0 +1,32 @@
+<sreach/>
+<view class="main">
+  <!-- 左边的商品切换栏开始 -->
+  <scroll-view class="goodsTab" scroll-y='{{true}}'>
+    <block wx:for="{{goodsTab}}" wx:key="id">
+      <view class="{{ goodsTabIndex == index ?'active' : ''}}" 
+      bindtap="selectTab" 
+      data-index='{{index}}'
+      >{{ item.name }}</view>
+    </block>
+  </scroll-view>
+  <!-- 左边的商品切换栏结束 -->
+  <!-- 右边对应商品信息开始 -->
+  <scroll-view class="allGoodsItem" scroll-y='{{true}}'>
+    <!-- 每一商品项 -->
+    <block wx:for="{{goods}}" wx:key="cat_id">
+      <!-- 商品的标题 -->
+      <view class="goodsTitle">{{item.cat_name}}</view>
+      <!-- 商品内容 -->
+      <view class="goodsItem">
+        <view wx:for="{{item.children}}" wx:key="cat_id" wx:for-item="item2" class="goodsIcon_Text" bindtap="selectGoods"
+        data-goodsData='{{item2}}'
+        >
+          <image src="{{item2.cat_icon}}"></image>
+          <!-- text会编译空格 -->
+          <text>{{item2.cat_name}}</text>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+  <!-- 右边对应商品信息结束 -->
+</view>

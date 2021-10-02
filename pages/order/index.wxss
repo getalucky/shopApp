@@ -1,0 +1,30 @@
+/* pages/order/index.wxss */
+page{
+  background: #f9f9f9;
+}
+.order .order_item{
+  width: 750rpx;
+  height: 250rpx;
+  background: #fff;
+  padding: 38rpx 32rpx;
+  margin-bottom: 13rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.order_item .item{
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 30rpx;
+  color: #696969;
+}
+.item .price{
+  color:var(--parimyColor);
+}
+.price::before{
+  content: '￥';
+  font-size: 24rpx;
+}

@@ -1,0 +1,29 @@
+<!-- 地址 -->
+<button bindtap="getUserAddress" class="{{ isshowbtn ? '' : 'hiddle'}}">获取地址</button>
+<view class="map" bindtap="getUserAddress">
+  <view class="address">{{userInfo.address}}</view>
+  <view class="message">
+    <view>{{userInfo.name}}</view>
+    <view>{{userInfo.tell}}</view>
+  </view>
+</view>
+<!-- 间隔 -->
+<view class="parting-line"></view>
+<!-- 商品 -->
+<view class="shopping"> 
+  <view class="title">已选商品</view>
+  <view wx:for="{{goodsList}}" wx:key="id" class="goods-Item">
+    <goodslist item="{{item}}"/>
+    <text class="goods-count">×{{item.goodsCount}}</text>
+  </view>
+</view>
+<!-- 付款 -->
+<view class="bottomCard">
+  <view class="allPrice">
+    <text>合计：</text>
+    <text class="price">{{allPrice}}</text>
+  </view>
+  <button class="settlement" bindtap="settlement">
+    去付款({{goodsList.length}})
+  </button>
+</view>
